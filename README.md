@@ -56,3 +56,9 @@ By following these Laravel conventions and using its built-in features, the code
 curl -X DELETE http://127.0.0.1:8000/api/items/{id}
 
 ```
+
+#### Unit Test (AAA)
+
+``` 
+    php artisan test
+```
