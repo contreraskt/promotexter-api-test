@@ -22,10 +22,13 @@ class ItemController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:items|max:255',
+            'name' => 'required'
         ]);
 
-        $item = Item::create($request->all());
+        $item = new Item;
+        $item->name = $request->input('name');
+        $item->save();
+
         return response()->json($item, 201);
     }
 
